@@ -14,7 +14,6 @@ const Home: React.FC = () => {
           <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
             Customers also purchased
           </h2>
-
           <Card />
         </div>
       </div>

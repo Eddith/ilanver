@@ -167,20 +167,18 @@ const Header: React.FC = () => {
 
                   <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                     <div className="flow-root">
-                      <a
-                        href="#"
-                        className="-m-2 p-2 block font-medium text-gray-900"
-                      >
-                        Sign in
-                      </a>
+                      <Link href="/login" passHref>
+                        <a className="-m-2 p-2 block font-medium text-gray-900">
+                          Sign in
+                        </a>
+                      </Link>
                     </div>
                     <div className="flow-root">
-                      <a
-                        href="#"
-                        className="-m-2 p-2 block font-medium text-gray-900"
-                      >
-                        Create account
-                      </a>
+                      <Link href="/register" passHref>
+                        <a className="-m-2 p-2 block font-medium text-gray-900">
+                          Create account
+                        </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -363,19 +361,17 @@ const Header: React.FC = () => {
 
                 <div className="ml-auto flex items-center">
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
-                      Sign in
-                    </a>
+                    <Link href="/auth/login" passHref>
+                      <a className="-m-2 p-2 block font-medium text-gray-900">
+                        Sign in
+                      </a>
+                    </Link>
                     <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
-                      Create account
-                    </a>
+                    <Link href="/auth/register" passHref>
+                      <a className="-m-2 p-2 block font-medium text-gray-900">
+                        Create account
+                      </a>
+                    </Link>
                   </div>
 
                   <div className="hidden lg:ml-8 lg:flex">

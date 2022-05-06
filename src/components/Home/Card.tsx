@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "../../utils/constants";
 
-import Image from "next/image";
+// import Image from "next/image";
 
 const Card: React.FC = () => {
   return (
