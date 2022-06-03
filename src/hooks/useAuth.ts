@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+interface IUser {
+  id: string;
+  name: string;
+  email: string;
+  avatar_url: string;
+}
+
 export const useAuth = () => {
   const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);
