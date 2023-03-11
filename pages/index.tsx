@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -28,6 +27,7 @@ const Home: NextPage = () => {
                      ? "bg-red-500 text-white active:bg-white active:text-red-500"
                      : "bg-slate-300 text-blue-500 active:bg-slate-600 active:text-white"
                  } gap-2`}
+                onClick={() => router.push(`/horoscope-detail/${item.id}`)}
               >
                 <img
                   className="flex items-center justify-center"
