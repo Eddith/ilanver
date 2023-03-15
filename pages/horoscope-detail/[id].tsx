@@ -24,11 +24,7 @@ const HoroscopeDetail: NextPage = () => {
           <div
             key={index}
             className={`w-full h-screen flex flex-col justify-center px-6 
-                 ${
-                   item.name === "Kova"
-                     ? "bg-red-500 text-white"
-                     : "bg-slate-300 text-blue-500"
-                 } gap-4`}
+            bg-slate-300 text-blue-500 gap-4`}
           >
             <div className="w-full flex items-center justify-between">
               <img
@@ -58,10 +54,7 @@ const HoroscopeDetail: NextPage = () => {
                 </svg>
               </button>
             </div>
-            <h3 className="text-2xl font-semibold">
-              {item.name === "Kova" ? "♥️" : ""} {item.name}{" "}
-              {item.name === "Kova" ? "♥️" : ""}
-            </h3>
+            <h3 className="text-2xl font-semibold">{item.name}</h3>
             <h3 className="text-xl font-bold">{item.date}</h3>
             <p className="text-base font-medium whitespace-normal">
               {item.description}

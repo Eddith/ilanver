@@ -22,11 +22,7 @@ const Home: NextPage = () => {
               <div
                 key={index}
                 className={`w-full flex flex-col justify-center rounded-lg p-6 
-                 ${
-                   item.name === "Kova"
-                     ? "bg-red-500 text-white active:bg-white active:text-red-500"
-                     : "bg-slate-300 text-blue-500 active:bg-slate-600 active:text-white"
-                 } gap-2`}
+                bg-slate-300 text-blue-500 active:bg-slate-600 active:text-white gap-2`}
                 onClick={() => router.push(`/horoscope-detail/${item.id}`)}
               >
                 <img
@@ -36,10 +32,7 @@ const Home: NextPage = () => {
                   width={100}
                   height={100}
                 />
-                <h3 className="text-2xl font-semibold">
-                  {item.name === "Kova" ? "♥️" : ""} {item.name}{" "}
-                  {item.name === "Kova" ? "♥️" : ""}
-                </h3>
+                <h3 className="text-2xl font-semibold">{item.name}</h3>
                 <h3 className="text-base font-bold">{item.date}</h3>
                 <p className="text-md font-normal whitespace-normal h-[70px] text-clip overflow-hidden">
                   {item.description}
