@@ -33,9 +33,11 @@ const Home: NextPage = () => {
                   height={100}
                 />
                 <h3 className="text-2xl font-semibold">{item.name}</h3>
-                <h3 className="text-base font-bold">{item.date}</h3>
+                <h3 className="text-base font-bold">
+                  Güneşe olan uzaklık {item.distance}
+                </h3>
                 <p className="text-md font-normal whitespace-normal h-[70px] text-clip overflow-hidden">
-                  {item.description}
+                  {item.details}
                 </p>
               </div>
             );

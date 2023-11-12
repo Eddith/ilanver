@@ -55,26 +55,65 @@ const HoroscopeDetail: NextPage = () => {
               </button>
             </div>
             <h3 className="text-2xl font-semibold">{item.name}</h3>
-            <h3 className="text-xl font-bold">{item.date}</h3>
             <p className="text-base font-medium whitespace-normal">
-              {item.description}
+              {item.details}
             </p>
             <div className="w-full flex items-center justify-between">
-              <h3 className="text-xl font-medium">Şanslı Gün:</h3>
-              <h3 className="text-xl font-bold">{item.luckyDay}</h3>
+              <h3 className="text-xl font-medium">Uzaklık:</h3>
+              <h3 className="text-xl font-bold">{item.distance}</h3>
             </div>
             <div className="w-full flex items-center justify-between">
-              <h3 className="text-xl font-medium">Şanslı Taş:</h3>
-              <h3 className="text-xl font-bold">{item.luckyStone}</h3>
+              <h3 className="text-xl font-medium">Çap:</h3>
+              <h3 className="text-xl font-bold">{item.diameter}</h3>
             </div>
-            <div className="w-full flex items-center justify-between">
-              <h3 className="text-xl font-medium">Mod:</h3>
-              <h3 className="text-xl font-bold">{item.mood}</h3>
-            </div>
-            <div className="w-full flex items-center justify-between">
-              <h3 className="text-xl font-medium">Uyumluluk:</h3>
-              <h3 className="text-xl font-bold">{item.compatibility}</h3>
-            </div>
+            {item.temperature_range ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Sıcaklık Aralığı:</h3>
+                <h3 className="text-xl font-bold">{item.temperature_range}</h3>
+              </div>
+            ) : null}
+            {item.temperature ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Sıcaklık:</h3>
+                <h3 className="text-xl font-bold">{item.temperature}</h3>
+              </div>
+            ) : null}
+            {item.satellites ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Uydular:</h3>
+                <h3 className="text-xl font-bold">{item.satellites}</h3>
+              </div>
+            ) : null}
+            {item.atmosphere ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Atmosfer:</h3>
+                <h3 className="text-xl font-bold">{item.atmosphere}</h3>
+              </div>
+            ) : null}
+            {item.surface ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Yüzey:</h3>
+                <h3 className="text-xl font-bold">{item.surface}</h3>
+              </div>
+            ) : null}
+            {item.magnetic_field ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Manyetik Alan:</h3>
+                <h3 className="text-xl font-bold">{item.magnetic_field}</h3>
+              </div>
+            ) : null}
+            {item.rings ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Halkalar:</h3>
+                <h3 className="text-xl font-bold">{item.rings}</h3>
+              </div>
+            ) : null}
+            {item.winds ? (
+              <div className="w-full flex items-center justify-between">
+                <h3 className="text-xl font-medium">Rüzgarlar:</h3>
+                <h3 className="text-xl font-bold">{item.winds}</h3>
+              </div>
+            ) : null}
           </div>
         );
       })}
